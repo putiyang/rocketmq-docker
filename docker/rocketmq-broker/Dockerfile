@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-FROM registry.cn-hangzhou.aliyuncs.com/szss/rocketmq-base:v4.3.1
+FROM registry.cn-hangzhou.aliyuncs.com/longyao/rocketmq-base:4.5.2
 #FROM szss/rocketmq-base:4.3.1
 
 ENV BROKER_CLUSTER_NAME="RocketMQCluster"
@@ -46,6 +46,8 @@ ENV PULL_MESSAGE_THREAD_POOL_NUMS=""
 ENV BROKER_IP1=""
 #broker ip
 ENV BROKER_IP2=""
+#延迟消息队列等级
+ENV MESSAGE_DELAY_LEVEL="1s 5s 10s 30s 1m 2m 3m 4m 5m 6m 7m 8m 9m 10m 20m 30m 1h 2h 6h 12h"
 
 EXPOSE 10909 10911
 

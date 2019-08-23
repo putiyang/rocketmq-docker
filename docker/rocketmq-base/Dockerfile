@@ -22,7 +22,7 @@ FROM centos:7
 RUN yum install -y java-1.8.0-openjdk-headless unzip gettext nmap-ncat openssl\
  && yum clean all -y
 
-ARG version=4.3.1
+ARG version=4.5.2
 
 # Rocketmq version
 ENV ROCKETMQ_VERSION ${version}
@@ -37,7 +37,7 @@ RUN mkdir -p \
  /opt/rocketmq/store
 
 # get the version
-RUN curl http://mirrors.hust.edu.cn/apache/rocketmq/${ROCKETMQ_VERSION}/rocketmq-all-${ROCKETMQ_VERSION}-bin-release.zip -o /opt/rocketmq-all-${ROCKETMQ_VERSION}-bin-release.zip \
+RUN curl http://mirror.bit.edu.cn/apache/rocketmq/${ROCKETMQ_VERSION}/rocketmq-all-${ROCKETMQ_VERSION}-bin-release.zip -o /opt/rocketmq-all-${ROCKETMQ_VERSION}-bin-release.zip \
  && unzip -d /opt /opt/rocketmq-all-${ROCKETMQ_VERSION}-bin-release.zip \
  && mv /opt/rocketmq-all-${ROCKETMQ_VERSION}-bin-release ${ROCKETMQ_HOME} \
  && rm -rf /opt/rocketmq-all*

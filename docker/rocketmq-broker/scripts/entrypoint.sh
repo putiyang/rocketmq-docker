@@ -78,6 +78,8 @@ mapedFileSizeConsumeQueue=${MAPED_FILE_SIZE_CONSUME_QUEUE}
 #diskMaxUsedSpaceRatio=88
 #发送信息线程池线程个数
 sendMessageThreadPoolNums=${SEND_MESSAGE_THREAD_POOL_NUMS}
+#延迟队列等级配置
+messageDelayLevel=${MESSAGE_DELAY_LEVEL}
 #拉取信息线程池线程个数
 ${PULL_MESSAGE_THREAD_POOL_NUMS_CONFIG}
 EOF
